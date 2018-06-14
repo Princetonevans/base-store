@@ -1,13 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button routerLink="/dashboard" routerLinkActive="active" mat-menu-item>Dashboard</button>
+  <button routerLink="/products" routerLinkActive="active" mat-menu-item>Products</button>
+  <button routerLink="/about" routerLinkActive="active" mat-menu-item>About</button>
+</mat-menu>
+
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
-
-  <nav>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="/products" routerLinkActive="active">Products</a>
-    <a routerLink="/about" routerLinkActive="active">About</a>
-  </nav>
   <router-outlet></router-outlet>
+</div>
   <!-- Routed views go here -->
