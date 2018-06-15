@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule, MatInputModule, MatSortModule, MatCardModule, MatTabsModule, MatIconModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatInputModule, MatSortModule, MatCardModule, MatTabsModule, MatIconModule, MatStepperModule } from '@angular/material';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +19,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
    MatSortModule,
    MatCardModule,
    MatTabsModule,
-   MatIconModule
+   MatIconModule,
+   MatStepperModule,
+   FormsModule,
+   ReactiveFormsModule
   ],
   exports: [
     MatButtonModule,
@@ -32,7 +35,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSortModule,
     MatCardModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    MatStepperModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class MaterialModule { }
