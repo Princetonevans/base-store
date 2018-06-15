@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatInputModule, MatSortModule, MatCardModule, MatTabsModule, MatIconModule } from '@angular/material';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -15,7 +15,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
    MatTableModule,
    MatPaginatorModule,
    MatFormFieldModule,
-   MatInputModule
+   MatInputModule,
+   MatSortModule,
+   MatCardModule,
+   MatTabsModule,
+   MatIconModule
   ],
   exports: [
     MatButtonModule,
@@ -24,7 +28,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatTableModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSortModule,
+    MatCardModule,
+    MatTabsModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

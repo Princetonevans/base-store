@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,14 +11,18 @@ export class DashboardComponent implements OnInit {
   displayedColumns = ['name', 'phone', 'email', 'address'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
+  title = 'Dashboard';
+  user = 'Princeton';
 
 
   @ViewChild(MatPaginator) paginator: MatPaginator
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor() { }
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
   applyFilter(filterValue: string) {
@@ -27,7 +31,7 @@ export class DashboardComponent implements OnInit {
     this.dataSource.filter = filterValue;
   }
 }
-}
+
 export interface PeriodicElement {
   name: string;
   phone: number;

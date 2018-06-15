@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  title = 'About';
+  user = 'Princeton';
+
   constructor() { }
 
   ngOnInit() {
